@@ -129,7 +129,7 @@ header h1{
     color: var(--textBlack);
     background-color: var(--backgroundWhite);
     padding-bottom: 60px;
-    border-bottom: black 1px solid
+    border-bottom: var(--blue) 1px solid
 }
 .projectCards{
     display: flex;
