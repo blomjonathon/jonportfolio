@@ -122,13 +122,6 @@ header h1{
 .about p{
     font-size: 18px;
 }
-.nodeSummary{
-    margin: 10px;
-    text-align: center;
-    background-color:var(--backgroundWhite);
-    padding: 10px;
-    border-radius: 20px;
-}
 .projectsHeader{
     display: flex;
     flex-direction: column;
