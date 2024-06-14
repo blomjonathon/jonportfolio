@@ -7,8 +7,6 @@
    --backgroundWhite: rgba(250, 247, 247, 0.958);
 }
 body {
-    margin: 0px;
-    padding: 0px;
     font-family: 'Roboto', sans-serif;
     background-color: black;
     color: black;
@@ -102,6 +100,8 @@ header h1{
     padding-bottom: 40px;
 }
 .jonImg{
+    margin: 30px;
+    height: 100%;
     width: 25%;
     padding: 60px;
 }
@@ -186,97 +186,99 @@ h5 a{
     color: blue;
 }
 
-/* laptop */
+/* 1200px */
+@media only screen and (max-width: 1200px) {
+  
+   }
+/* laptopish 1030px */
+@media only screen and (max-width: 1030px) {
+    .jonImg{
+        margin: auto;
+    }
+    .projectCards section img {
+        height: 300px;
+        width: 500px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+    #about{
+        margin-left: 0px;
+    }
+  }
 
 /* tablet 768px */
 
 @media only screen and (max-width: 768px) {
-    nav{
-        justify-content: center;
+    nav a{
+        margin: 10px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
     nav ul{
-        margin-right: 0px;
-    }
-    nav img{
-        display: none;
-    }
-    .firstHeader{
-        height: 600px;
+        text-align: center;
     }
     .about{
-        align-items: center;
-    }
-    #about{
-        margin: 0px 10px;
-    }
-    .about h2, p{
-        text-align: center;
-    }
-    .projectCards{
-        height: 1000px;
-    }
-    .projectCards section{
-        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        height: 200px;
-        width: 150px;
-        padding: 50px 50px 50px 50px;
-        color: white;
     }
-    #firstChild{
-        height: 300px;
-        width: 300px;
-        margin: 0px 234px;
-        }
-    #calc{
-        margin-left: 134px;
-    }
-    #taskMan{
-        margin-right: 134px;
-    }
-    #middleSoonImg{
-        margin-right: 15px;
-    }
-    #lastSoonImg{
-        margin-right: 50px;
+    #about h2{
+        text-align: center;
     }
   }
-/* mobile 320px */
 
 @media only screen and (max-width: 576px) {
-    .about h2{
-        padding-bottom: 40px;
+    nav a{
+        margin: 10px;
+        padding: 0px;
     }
-    .about p{
-        margin-bottom: 10px;
-        font-size: 16px;
-    }
-    .projectsHeader{
-        padding-bottom: 0px;
-    }
-    .projectCards{
-        padding-bottom: 0px;
-    }
-    .projectCards section h3{
+    nav ul{
         text-align: center;
     }
-    .projectCards section:nth-last-child(-n+3) {
-        display: none;
+    .fheader-border{
+        padding: 0px;
     }
-    #resize{
+    .firstHeader{
+        height: 400px;
+    }
+    .jonImg{
+        width: 50%;
+    }
+    .projectCards section img{
         height: 200px;
-        width: 250px;
+        width: 325px;
     }
-    #taskMan a img, #calc a img{
+    .contact{
+        padding: 20px;
+    }
+    .contact h5{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .firstHeader{
+        height: 250px;
+    }
+    .subtitle{
+        padding: 5px;
+    }
+    #about{
+        padding: 10px;
+        text-align: center;
+    }
+    .projectCards{
+        padding-bottom: 30px;
+    }
+    .projectCards section{
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+    .projectCards section img {
         height: 150px;
-        width: 150px;
+        width: 225px;
     }
-    #calc{
-        margin-left: 10px;
-    }
-    #taskMan{
-        margin-right: 10px;
+    footer{
+        font-size: 12px;
     }
 }
