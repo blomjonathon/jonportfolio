@@ -77,14 +77,14 @@ a:hover{
     border-radius: 20px;
 }
 
-@keyframes changeColor {
-    0%  {background-color:var(--blue); color:var(--blue) }
-    25%  {background-color:var(--blue); color:var(--blue) }
-    25%  {background-color:var(--blue); color:var(--blue) }
-    50%  {background-color:black; color:var(--blue) }
-  }
-
-
+.firstHeader{
+    background-image: url('../images/mtbimg.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%;
+}
 .firstHeader h1, .firstHeader h2{
     margin: 0px 10px;
 }
