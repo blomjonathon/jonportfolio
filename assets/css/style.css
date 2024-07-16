@@ -59,23 +59,20 @@ a:hover{
     opacity: .5;
 }
 .firstHeader{
-    display: none;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     height:800px;
     width: 100%;
     color:var(--textWhite);
-    animation-name: changeColor;
-    animation-duration: 5s;
+    
 }
-.fheader-border{
+/* .fheader-border{
     padding: 20px;
     border: var(--blue) 5px solid;
     border-radius: 20px;
-}
+} */
 
 .firstHeader{
     background-image: url('../images/mtbimg.jpg');
@@ -90,11 +87,11 @@ a:hover{
 }
 
 .title{
-    border-bottom: var(--blue) 2px solid;
-    padding: 20px;
+    font-size: 60px;
 }
 .subtitle{
-    padding: 20px;
+    font-size: 40px;
+    padding: 40px;
 }
 header h1{
     padding-bottom: 40px;
