@@ -95,7 +95,6 @@ header h1{
     margin: 30px;
     height: 100%;
     width: 25%;
-    padding: 60px;
 }
 .about {
     display: flex;
@@ -104,7 +103,10 @@ header h1{
     background-color: var(--blue);
 }
 #about{
-    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    justify-content: center;
     margin-left: 60px;
     padding: 60px 60px;
 }
@@ -128,10 +130,11 @@ header h1{
 }
 .projectCards{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     color: var(--textBlack);
     background-color: var(--backgroundWhite);
+    padding: 30px;
 }
 .projectCards section{
     /* display: flex;
@@ -149,6 +152,7 @@ header h1{
 }
 .projectCards section a{
     display: flex;
+    padding: 10px;
 }
 .projectCards section a p{
     width: 300px;
