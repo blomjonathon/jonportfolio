@@ -207,6 +207,7 @@ h5 a{
 @media only screen and (max-width: 1030px) {
     .jonImg{
         margin: auto;
+        padding-right: 30px;
     }
     .projectCards section img {
         height: 300px;
@@ -218,6 +219,13 @@ h5 a{
     #about{
         margin-left: 0px;
     }
+    .firstHeader{
+        justify-content: center;
+    }
+    .projectCards section img {
+        height: 200px;
+        width: 400px;
+  }
   }
 
 /* tablet 768px */
@@ -230,6 +238,9 @@ h5 a{
     }
     nav ul{
         text-align: center;
+    }
+    .firstHeader{
+        justify-content: ;
     }
     .about{
         flex-direction: column;
@@ -256,10 +267,27 @@ h5 a{
     }
     .jonImg{
         width: 50%;
+        margin-bottom: 30px;
     }
+    .projectCards{
+        justify-content: center;
+    }
+    .projectCards section {
+        align-items: center;
+    }
+    
     .projectCards section img{
-        height: 200px;
-        width: 325px;
+        height: 150px;
+        width: 275px;
+    }
+    .projectCards section .content-row {
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        gap: 20px; 
+    }
+    .projectCards section p{
+        text-align: center
     }
     .contact{
         padding: 20px;
@@ -283,6 +311,7 @@ h5 a{
         padding-bottom: 30px;
     }
     .projectCards section{
+        justify-content: center;
         padding-right: 0px;
         padding-left: 0px;
         padding-bottom: 0px;
