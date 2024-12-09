@@ -143,7 +143,6 @@ header h1{
     display: flex;
     flex-direction: column; /* Stack the heading first */
     align-items: flex-start; /* Align to the start */
-    width: calc(50% - 20px); /* Two items per row with spacing */
     box-sizing: border-box;
     margin-bottom: 20px;
 }
@@ -151,7 +150,6 @@ header h1{
 .projectCards section h3 {
     margin-bottom: 10px; /* Add spacing below the heading */
     font-size: 24px;
-    text-align: left;
 }
 
 .projectCards section .content-row {
