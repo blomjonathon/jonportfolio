@@ -210,7 +210,7 @@ h5 a{
    }
 /* laptopish 1030px */
 @media only screen and (max-width: 1030px) {
-    .firstHeader h1{
+    .firstHeader h1, .firstHeader h2{
         padding-left: 0px;
     }
     nav ul{
