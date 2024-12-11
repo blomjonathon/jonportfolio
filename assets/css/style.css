@@ -210,6 +210,12 @@ h5 a{
    }
 /* laptopish 1030px */
 @media only screen and (max-width: 1030px) {
+    nav ul{
+        width: 100%
+    }
+    nav a {
+        margin-right: 100px;
+    }
     .jonImg{
         margin: auto;
         padding-right: 30px;
