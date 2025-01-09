@@ -163,7 +163,7 @@ header h1{
 
 .projectCards section img {
     width: 200px;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     border-radius: 15px;
     border: 1px solid var(--blue);
 }
