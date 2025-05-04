@@ -1,15 +1,22 @@
 * { 
     margin: 0px;
     padding: 0px;
-   --blue: rgb(65, 126, 146);
-   --textBlack: black;
-   --textWhite: white;
-   --backgroundWhite: rgba(250, 247, 247, 0.958);
+    --primary: #0A192F;
+    --primary-light: #112240;
+    --accent: #64FFDA;
+    --accent-hover: #45E6C3;
+    --text-dark: #8892B0;
+    --text-light: #CCD6F6;
+    --background: #0A192F;
+    --background-alt: #112240;
+    --highlight: #FF6B6B;
+    box-sizing: border-box;
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black;
-    color: black;
+    background-color: var(--background);
+    color: var(--text-light);
+    line-height: 1.6;
 }
 h1{
     font-size: 34px;
@@ -39,16 +46,27 @@ ul,ol{
 nav{
     display: flex;
     align-items: center;
-    text-align: right;
-    background-color: var(--blue);
+    justify-content: flex-end;
+    background-color: var(--primary);
     height: 70px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 nav ul{
-    width: 100%
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem;
 }
 nav a {
-    margin-right: 100px;
+    margin: 0 1.5rem;
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 a{
     text-decoration: none;
@@ -59,14 +77,16 @@ a:hover{
     opacity: .5;
 }
 .firstHeader{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    height:800px;
+    background-image: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('../images/mtbimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     width: 100%;
-    color:var(--textWhite);
-    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 4rem;
 }
 
 .firstHeader{
@@ -83,119 +103,129 @@ a:hover{
 }
 
 .title{
-    font-size: 60px;
-    padding-left: 60px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
 }
 .subtitle{
-    font-size: 40px;
-    padding: 40px;
+    font-size: 2rem;
+    color: var(--text-light);
+    font-weight: 400;
 }
 header h1{
     padding-bottom: 40px;
 }
 .jonImg{
-    margin: 30px;
-    height: 100%;
-    width: 25%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 .about {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: var(--blue);
+    background-color: var(--primary-light);
+    padding: 4rem 2rem;
 }
 #about{
-    display: flex;
-    flex-direction: column;
     max-width: 600px;
-    justify-content: center;
-    margin-left: 60px;
-    padding: 60px 60px;
+    margin-left: 4rem;
 }
 #about h2{
-    padding-bottom: 10px;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
 }
 .about p{
-    line-height: 1.5;
-    font-size: 18px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
 }
 .projectsHeader{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px;
-    color: var(--textBlack);
-    background-color: var(--backgroundWhite);
-    padding-bottom: 60px;
-    border-bottom: var(--blue) 1px solid
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--primary);
 }
 .projectCards {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to new rows */
-    align-items: flex-start; /* Align items to the top of the row */
-    justify-content: space-between; /* Space items evenly */
-    color: var(--textBlack);
-    background-color: var(--backgroundWhite);
-    padding: 50px;
-    gap: 20px; /* Space between items */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--primary);
 }
 
 .projectCards section {
-    display: flex;
-    flex-direction: column; /* Stack the heading first */
-    align-items: flex-start; /* Align to the start */
-    box-sizing: border-box;
-    margin-bottom: 20px;
+    background: var(--primary-light);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.projectCards section:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
 }
 
 .projectCards section h3 {
-    margin-bottom: 10px; /* Add spacing below the heading */
-    font-size: 24px;
+    padding: 1rem;
+    color: var(--accent);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 
-.projectCards section .content-row {
-    display: flex; /* Arrange image and paragraph in a row */
-    align-items: center; /* Vertically align items in the row */
-    gap: 20px; /* Add spacing between image and paragraph */
+.content-row {
+    padding: 1rem;
 }
 
 .projectCards section img {
-    width: 200px;
-    height: auto;
-    border-radius: 15px;
-    border: 1px solid var(--blue);
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .projectCards section p {
-    line-height: 1.5;
-    font-size: 16px;
-    text-align: left;
-    max-width: 300px; /* Restrict width for better readability */
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-dark);
 }
-
 
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--backgroundWhite);
-    padding: 10px 10px;
+    background-color: var(--primary);
+    color: var(--text-dark);
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
 }
 .contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--blue);
-    padding: 50px
+    background-color: var(--primary-light);
+    color: var(--text-light);
+    padding: 4rem 2rem;
+    text-align: center;
 }
 #imgBorder{
     border: none;
 }
-.contact h5{
-    padding-top: 10px;
+.contact h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--accent);
+}
+.contact h5 {
+    margin: 1rem 0;
+}
+.contact a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact a:hover {
+    color: var(--accent-hover);
 }
 h5 a{
     font-size: 16px;
@@ -254,66 +284,47 @@ h5 a{
 /* tablet 768px */
 
 @media only screen and (max-width: 768px) {
+    .firstHeader {
+        padding: 0 2rem;
+    }
     
-    .firstHeader{
-        justify-content: ;
-    }
-    .about{
+    .about {
         flex-direction: column;
-        align-items: center;
-    }
-    #about h2{
         text-align: center;
     }
-    .jonImg{
-        padding-bottom: 30px;
-        padding-right: 0px;
+    
+    #about {
+        margin-left: 0;
+        padding: 2rem;
     }
-  }
+    
+    .jonImg {
+        width: 250px;
+        height: 250px;
+        margin: 2rem auto;
+    }
+}
 
 @media only screen and (max-width: 576px) {
-    nav a{
-        margin: 10px;
-        padding: 0px;
-    }
-    nav ul{
-        text-align: center;
-    }
-    .fheader-border{
-        padding: 0px;
-    }
-    .firstHeader{
-        height: 400px;
-    }
-    .jonImg{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-    .projectCards{
-        justify-content: center;
-    }
-    .projectCards section {
-        align-items: center;
+    nav a {
+        margin: 0 0.75rem;
+        font-size: 1rem;
     }
     
-    .projectCards section img{
-        height: 150px;
-        width: 275px;
+    .title {
+        font-size: 2.5rem;
     }
-    .projectCards section .content-row {
-        display: flex; 
-        flex-direction: column;
-        align-items: center; 
-        gap: 20px; 
+    
+    .subtitle {
+        font-size: 1.5rem;
     }
-    .projectCards section p{
-        text-align: center
+    
+    .projectCards {
+        grid-template-columns: 1fr;
     }
-    .contact{
-        padding: 20px;
-    }
-    .contact h5{
-        text-align: center;
+    
+    .contact {
+        padding: 2rem 1rem;
     }
 }
 @media only screen and (max-width: 440px) {
@@ -351,3 +362,9 @@ h5 a{
         font-size: 12px;
     }
 }
+
+nav a:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
