@@ -105,7 +105,7 @@ nav a:hover::after {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: var(--space-md);
-    background: linear-gradient(to right, var(--secondary), var(--accent));
+    color: var(--secondary);
 }
 
 .subtitle {
