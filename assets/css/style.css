@@ -129,7 +129,7 @@ nav a:hover::after {
 
 .jonImg {
     width: 300px;
-    height: 300px;
+    height: 320px;
     border-radius: var(--radius-lg);
     object-fit: cover;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
