@@ -3,88 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jonathon Blom — developer and designer. I design, build, and deploy websites and web applications.">
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Jonathon Blom</title>
+    <title>Jonathon Blom — Design. Develop. Deploy.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body>  
+<body>
     <nav>
-        <ul>
-            <a href="#about">about</a>
-            <a href="#projects">projects</a>
-            <a href="#contact">contact</a>
-        </ul>
+        <div class="nav-inner">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <section class="firstHeader">
+
+    <section class="firstHeader" id="top">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-grid"></div>
         <div class="fheader-border">
+            <p class="eyebrow">Developer &amp; Designer</p>
             <h1 class="title">Jonathon Blom</h1>
             <div class="subtitle-container">
                 <h2 class="subtitle subtitle-large">Design</h2>
                 <h2 class="subtitle subtitle-medium">Develop</h2>
                 <h2 class="subtitle subtitle-small">Deploy</h2>
             </div>
+            <p class="hero-tagline">I use technology to solve business problems.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+            </div>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about reveal">
+        <img class="jonImg" src="./assets/images/JonathonPic.jpg" alt="Jonathon Blom">
         <div id="about">
-            <h2 id="about-title">About</h2>
-            <p>I solve problems big and small, I also design and build websites.</p>    
+            <p class="section-kicker section-kicker-lg">About</p>
+            <h2 id="about-title">Hi, I'm Jonathon.</h2>
+            <p>I solve problems big and small. I design and build websites and web applications that are fast, clean, and built to grow with the businesses behind them, and I use AI automation to cut out repetitive work so businesses run leaner and save time.</p>
+            <div class="skill-chips">
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>APIs</span>
+                <span>HTML &amp; CSS</span>
+                <span>SEO</span>
+                <span>AI Automation</span>
+            </div>
         </div>
-        <img class='jonImg'src="./assets/images/JonathonPic.jpg" alt="Jonathon Image"></a>
     </section>
-    <header class="projectsHeader">
-        <h2 id="projects">Projects</h2>
+
+    <header class="projectsHeader reveal">
+        <p class="section-kicker section-kicker-lg">Projects</p>
+        <h2 id="projects">Case Studies</h2>
     </header>
     <section class="projectCards" id="projectCards">
-        <section>
-            <h3>Canvas Church</h3>
-            <div class="content-row">
-                <a href="https://www.canvasmankato.com/" target="_blank">
-                    <img src="./assets/images/updatedcanva.png" alt="Canvas Church Image">
-                </a>
-                <p>
-                    Contributed to a church website by integrating a dynamic calendar with Node.js and creating a Bible study plan for participants. Used JavaScript and APIs to enhance functionality and user engagement.
-                </p>
+        <article class="reveal">
+            <a class="card-media" href="https://newcentralauto.com/" target="_blank" rel="noopener">
+                <img src="./assets/images/ncab-screenshot.png" alt="New Central Auto Body website">
+                <span class="card-media-overlay">Visit site <span class="arrow">↗</span></span>
+            </a>
+            <div class="card-body">
+                <h3>New Central Auto Body</h3>
+                <p>Designed and built a custom website for a body shop, optimized for local search and Google visibility. Automated several back-office processes to save the business time and generate more revenue.</p>
+                <div class="tag-row">
+                    <span class="tag">Web Design</span>
+                    <span class="tag">SEO</span>
+                    <span class="tag">Automation</span>
+                </div>
+                <a class="card-link" href="https://newcentralauto.com/" target="_blank" rel="noopener">newcentralauto.com ↗</a>
             </div>
-        </section>
+        </article>
+        <article class="reveal">
+            <a class="card-media" href="https://www.canvasmankato.com/" target="_blank" rel="noopener">
+                <img src="./assets/images/updatedcanva.png" alt="Canvas Church website">
+                <span class="card-media-overlay">Visit site <span class="arrow">↗</span></span>
+            </a>
+            <div class="card-body">
+                <h3>Canvas Church</h3>
+                <p>Contributed to a church website by integrating a dynamic calendar with Node.js and building a Bible study plan for participants, using JavaScript and APIs to enhance functionality and engagement.</p>
+                <div class="tag-row">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">APIs</span>
+                </div>
+                <a class="card-link" href="https://www.canvasmankato.com/" target="_blank" rel="noopener">canvasmankato.com ↗</a>
+            </div>
+        </article>
     </section>
-    <section class="contact">
+
+    <section class="contact reveal">
         <div class="contact-container">
-            <h2 id="contact">Contact</h2>
+            <p class="section-kicker section-kicker-light">Get in touch</p>
+            <h2 id="contact">Let's solve a problem together.</h2>
             <div class="contact-content">
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <a href="mailto:blomjonathon@gmail.com">blomjonathon@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/jonathon-blom-7158bb168/" target="_blank">Connect on LinkedIn</a>
-                </div>
-                <div class="contact-item">
-                    <h3>GitHub</h3>
-                    <a href="https://github.com/blomjonathon" target="_blank">View my GitHub</a>
-                </div>
+                <a class="contact-item" href="mailto:blomjonathon@gmail.com">
+                    <span class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z"/><path d="m4 6.5 8 6.5 8-6.5"/></svg>
+                    </span>
+                    <span class="contact-text">
+                        <h3>Email</h3>
+                        <span>blomjonathon@gmail.com</span>
+                    </span>
+                </a>
+                <a class="contact-item" href="https://www.linkedin.com/in/jonathon-blom-7158bb168/" target="_blank" rel="noopener">
+                    <span class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4.5 8.5h2.2v11H4.5v-11Z"/><circle cx="5.6" cy="5" r="1.4" fill="currentColor" stroke="none"/><path d="M10.2 8.5h2.1v1.5c.5-.9 1.6-1.7 3.2-1.7 2.5 0 3.5 1.7 3.5 4.3v6.9h-2.2v-6.4c0-1.5-.5-2.5-1.9-2.5-1.2 0-1.9.8-2.2 1.6-.1.3-.1.7-.1 1.1v6.2h-2.2V8.5Z" fill="currentColor" stroke="none"/></svg>
+                    </span>
+                    <span class="contact-text">
+                        <h3>LinkedIn</h3>
+                        <span>Connect with me</span>
+                    </span>
+                </a>
+                <a class="contact-item" href="https://github.com/blomjonathon" target="_blank" rel="noopener">
+                    <span class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                    </span>
+                    <span class="contact-text">
+                        <h3>GitHub</h3>
+                        <span>View my work</span>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
-    <section class="footer">
-        <footer>© Copyright 2023 | Created by Jonathon Blom </footer>
-    </section>
-    
+
+    <footer class="footer">
+        <p>© 2026 Jonathon Blom.</p>
+    </footer>
+
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         ↑
     </button>
-    
+
     <script>
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Reveal on scroll
+        const revealEls = document.querySelectorAll('.reveal, .projectCards article');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => revealObserver.observe(el));
+
         // Back to Top functionality
         const backToTopButton = document.getElementById('backToTop');
-        
-        // Show button when user scrolls down
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
@@ -92,13 +184,8 @@
                 backToTopButton.classList.remove('show');
             }
         });
-        
-        // Smooth scroll to top when button is clicked
         backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
